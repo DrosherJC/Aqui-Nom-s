@@ -79,9 +79,9 @@ aqui-nomas/
 ### Sprints Scrum
 
 **Sprint 1 — Planificación UX**
-- Definición de user stories y backlog
+- Definición de backlog
 - Wireframes en NinjaMock para mobile, tablet y desktop
-- Decisiones de layout: nav fija, grilla de rutas, sección consejos, footer
+- Decisiones de layout: nav fija, grid de rutas, sección consejos, footer
 
 **Sprint 2 — Diseño visual**
 - Mockups en Figma con identidad visual completa
