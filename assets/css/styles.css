@@ -444,7 +444,7 @@ body {
 /* RESPONSIVE — DESKTOP (900px)*/
 @media (min-width: 900px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .hero-title {
