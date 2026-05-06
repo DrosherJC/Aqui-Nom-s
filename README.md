@@ -10,7 +10,10 @@ Sitio web estático y responsive que presenta las mejores rutas de senderismo al
 
 | Mobile | Tablet | Desktop |
 |--------|--------|---------|
-| Nav hamburguesa · tarjetas full-width | Grilla 2 col | Grilla 3 col · hero pantalla completa |
+| <img width="413" height="732" alt="image" src="https://github.com/user-attachments/assets/7a7b62f5-c5e4-4938-893c-d4d245c52758" />
+| <img width="563" height="745" alt="image" src="https://github.com/user-attachments/assets/95baca8f-0558-4dde-b103-4c180d9993e5" />
+ | <img width="1895" height="920" alt="image" src="https://github.com/user-attachments/assets/f60fba66-fd6f-4d6e-9bf4-cae1d84a759a" />
+ |
 
 ---
 
