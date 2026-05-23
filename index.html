@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquí Nomás — El Observador Andino</title>
+    <link rel="stylesheet" href="src/assets/css/styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════
+     :TARGET PANELS — Login & Register
+     Activados por href="#login" / href="#register"
+     CSS puro, sin JS
+     ═══════════════════════════════════════ -->
+    <div class="auth-overlay" id="login">
+        <div class="auth-panel">
+            <a class="auth-close" href="#">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+            <div class="auth-panel__brand">⛰ Aquí Nomás</div>
+            <h2 class="auth-panel__title">Bienvenido de vuelta</h2>
+            <p class="auth-panel__sub">Ingresa tus credenciales para continuar</p>
+            <div class="auth-form">
+                <div class="field">
+                    <label class="field__label">Correo electrónico</label>
+                    <input class="field__input" type="email" placeholder="tu@correo.com" />
+                </div>
+                <div class="field">
+                    <label class="field__label">Contraseña</label>
+                    <input class="field__input" type="password" placeholder="••••••••" />
+                </div>
+                <a class="auth-link auth-link--right" href="#">¿Olvidaste tu contraseña?</a>
+                <button class="btn btn--primary btn--block">Iniciar sesión</button>
+            </div>
+            <p class="auth-panel__footer">¿No tienes cuenta? <a class="auth-link" href="#register">Regístrate</a></p>
+            <a class="auth-back" href="#"><span class="material-symbols-outlined">arrow_back</span> Volver al inicio</a>
+        </div>
+    </div>
+
+    <div class="auth-overlay" id="register">
+        <div class="auth-panel">
+            <a class="auth-close" href="#">
+                <span class="material-symbols-outlined">close</span>
+            </a>
+            <div class="auth-panel__brand">⛰ Aquí Nomás</div>
+            <h2 class="auth-panel__title">Crea tu cuenta</h2>
+            <p class="auth-panel__sub">Únete a la comunidad de senderistas</p>
+            <div class="auth-form">
+                <div class="field">
+                    <label class="field__label">Nombre completo</label>
+                    <input class="field__input" type="text" placeholder="Tu nombre" />
+                </div>
+                <div class="field">
+                    <label class="field__label">Correo electrónico</label>
+                    <input class="field__input" type="email" placeholder="tu@correo.com" />
+                </div>
+                <div class="field">
+                    <label class="field__label">Contraseña</label>
+                    <input class="field__input" type="password" placeholder="••••••••" />
+                </div>
+                <div class="field">
+                    <label class="field__label">Tipo de cuenta</label>
+                    <select class="field__input field__select">
+                        <option value="turista">Turista</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <button class="btn btn--primary btn--block">Crear cuenta</button>
+            </div>
+            <p class="auth-panel__footer">¿Ya tienes cuenta? <a class="auth-link" href="#login">Inicia sesión</a></p>
+            <a class="auth-back" href="#"><span class="material-symbols-outlined">arrow_back</span> Volver al inicio</a>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+     MODALES DE RUTAS 
+     ═══════════════════════════════════════ -->
+    <div class="route-modal" id="modal-rucu">
+        <div class="route-modal__backdrop" onclick="closeModal('rucu')"></div>
+        <div class="route-modal__panel">
+            <button class="route-modal__close" onclick="closeModal('rucu')">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="route-modal__img-wrap">
+                <img src="src/assets/img/Rucu Pichincha.webp" alt="Rucu Pichincha" class="route-modal__img" />
+                <span class="badge badge--hard route-modal__badge">Moderada-Difícil</span>
+            </div>
+            <div class="route-modal__body">
+                <span class="route-modal__label">Detalles técnicos</span>
+                <h2 class="route-modal__title">Teleférico + Rucu Pichincha</h2>
+                <div class="route-modal__meta">
+                    <div class="meta-pill"><span class="material-symbols-outlined">altitude</span> 4,784 msnm</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">distance</span> 8–10 km</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">schedule</span> 4–6 h</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">calendar_month</span> Jun–Sep</div>
+                </div>
+                <p class="route-modal__desc">Cumbre icónica accesible desde el teleférico, con senderos de páramo y
+                    vistas espectaculares de Quito y la cordillera andina. El acceso en teleférico sube hasta ~3,900
+                    msnm; desde allí el sendero atraviesa páramo abierto hasta la cumbre. El último tramo es un arenal
+                    empinado y técnico que requiere buena condición física.</p>
+                <div class="route-modal__tip">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Lleva ropa impermeable y bastones. El clima puede cambiar en minutos.</span>
+                </div>
+                <div class="route-modal__map">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mapa interactivo — próximamente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="route-modal" id="modal-pasochoa">
+        <div class="route-modal__backdrop" onclick="closeModal('pasochoa')"></div>
+        <div class="route-modal__panel">
+            <button class="route-modal__close" onclick="closeModal('pasochoa')">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="route-modal__img-wrap">
+                <img src="src/assets/img/Pasochoa.webp" alt="Volcán Pasochoa" class="route-modal__img" />
+                <span class="badge badge--moderate route-modal__badge">Moderada</span>
+            </div>
+            <div class="route-modal__body">
+                <span class="route-modal__label">Detalles técnicos</span>
+                <h2 class="route-modal__title">Volcán Pasochoa</h2>
+                <div class="route-modal__meta">
+                    <div class="meta-pill"><span class="material-symbols-outlined">altitude</span> 4,200 msnm</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">distance</span> 12–14 km</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">schedule</span> 7–8 h</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">calendar_month</span> Jun–Sep</div>
+                </div>
+                <p class="route-modal__desc">Reserva natural con bosques andinos y pajonales, ideal para una caminata
+                    completa en contacto con la biodiversidad. El bosque primario protege más de 120 especies de aves.
+                    Ubicado al sureste de Quito, ofrece vistas del Cotopaxi y el Antisana en días despejados.</p>
+                <div class="route-modal__tip">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Ingreso con registro en la Reserva. Lleva agua suficiente para 8 horas.</span>
+                </div>
+                <div class="route-modal__map">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mapa interactivo — próximamente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="route-modal" id="modal-pululahua">
+        <div class="route-modal__backdrop" onclick="closeModal('pululahua')"></div>
+        <div class="route-modal__panel">
+            <button class="route-modal__close" onclick="closeModal('pululahua')">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="route-modal__img-wrap">
+                <img src="src/assets/img/Pululahua.webp" alt="Cráter Pululahua" class="route-modal__img" />
+                <span class="badge badge--easy route-modal__badge">Fácil-Moderada</span>
+            </div>
+            <div class="route-modal__body">
+                <span class="route-modal__label">Detalles técnicos</span>
+                <h2 class="route-modal__title">Cráter Pululahua</h2>
+                <div class="route-modal__meta">
+                    <div class="meta-pill"><span class="material-symbols-outlined">altitude</span> 3,350 msnm</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">distance</span> 8–9 km</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">schedule</span> 2–3 h</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">calendar_month</span> Todo el año
+                    </div>
+                </div>
+                <p class="route-modal__desc">Uno de los pocos cráteres volcánicos habitados del mundo. El descenso es
+                    empinado pero corto. El fondo del cráter goza de un microclima único con tierras fértiles y paisajes
+                    pastorales inigualables. Vista panorámica desde el mirador de Ventanillas.</p>
+                <div class="route-modal__tip">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Apta para familias. Los fines de semana puede haber niebla densa en la mañana.</span>
+                </div>
+                <div class="route-modal__map">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mapa interactivo — próximamente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="route-modal" id="modal-guagua">
+        <div class="route-modal__backdrop" onclick="closeModal('guagua')"></div>
+        <div class="route-modal__panel">
+            <button class="route-modal__close" onclick="closeModal('guagua')">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="route-modal__img-wrap">
+                <img src="src/assets/img/Guagua Pichincha.webp" alt="Guagua Pichincha" class="route-modal__img" />
+                <span class="badge badge--hard route-modal__badge">Difícil</span>
+            </div>
+            <div class="route-modal__body">
+                <span class="route-modal__label">Detalles técnicos</span>
+                <h2 class="route-modal__title">Guagua Pichincha</h2>
+                <div class="route-modal__meta">
+                    <div class="meta-pill"><span class="material-symbols-outlined">altitude</span> 4,784 msnm</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">distance</span> 16–18 km</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">schedule</span> 7–9 h</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">calendar_month</span> Jun–Sep</div>
+                </div>
+                <p class="route-modal__desc">Volcán activo con una ruta exigente que atraviesa formaciones volcánicas
+                    hasta su cráter humeante. Requiere experiencia previa en alta montaña. Se recomienda verificar el
+                    estado de actividad volcánica con el IGEPN antes de cada salida.</p>
+                <div class="route-modal__tip">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Consulta el reporte del IGEPN. Ruta solo para montañistas con experiencia.</span>
+                </div>
+                <div class="route-modal__map">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mapa interactivo — próximamente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="route-modal" id="modal-ilalo">
+        <div class="route-modal__backdrop" onclick="closeModal('ilalo')"></div>
+        <div class="route-modal__panel">
+            <button class="route-modal__close" onclick="closeModal('ilalo')">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="route-modal__img-wrap">
+                <img src="src/assets/img/Ilalo.webp" alt="Volcán Ilaló" class="route-modal__img" />
+                <span class="badge badge--easy route-modal__badge">Fácil-Moderada</span>
+            </div>
+            <div class="route-modal__body">
+                <span class="route-modal__label">Detalles técnicos</span>
+                <h2 class="route-modal__title">Volcán Ilaló</h2>
+                <div class="route-modal__meta">
+                    <div class="meta-pill"><span class="material-symbols-outlined">altitude</span> 3,180 msnm</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">distance</span> 10–11 km</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">schedule</span> 4–5 h</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">calendar_month</span> Todo el año
+                    </div>
+                </div>
+                <p class="route-modal__desc">Volcán extinto ideal para aclimatación, con senderos accesibles y vistas
+                    panorámicas excepcionales de los valles de Los Chillos y Tumbaco. Perfecto como primer volcán antes
+                    de rutas más exigentes. Acceso desde varios puntos del valle.</p>
+                <div class="route-modal__tip">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Ideal para principiantes y familias. Lleva protector solar, la exposición es alta.</span>
+                </div>
+                <div class="route-modal__map">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mapa interactivo — próximamente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="route-modal" id="modal-nono">
+        <div class="route-modal__backdrop" onclick="closeModal('nono')"></div>
+        <div class="route-modal__panel">
+            <button class="route-modal__close" onclick="closeModal('nono')">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="route-modal__img-wrap">
+                <img src="src/assets/img/Guagrapamba de Nono.webp" alt="Cascadas de Nono" class="route-modal__img" />
+                <span class="badge badge--easy route-modal__badge">Fácil</span>
+            </div>
+            <div class="route-modal__body">
+                <span class="route-modal__label">Detalles técnicos</span>
+                <h2 class="route-modal__title">Cascadas de Nono</h2>
+                <div class="route-modal__meta">
+                    <div class="meta-pill"><span class="material-symbols-outlined">altitude</span> 2,700 msnm</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">distance</span> 3 km</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">schedule</span> 1.5–2 h</div>
+                    <div class="meta-pill"><span class="material-symbols-outlined">calendar_month</span> Todo el año
+                    </div>
+                </div>
+                <p class="route-modal__desc">Ruta tranquila entre bosques nublados, ríos y cascadas, ideal para
+                    desconectarse cerca de la ciudad. El sendero es apto para familias y principiantes, con mínima
+                    ganancia de altitud. El bosque nublado de Nono es uno de los pulmones más cercanos a Quito.</p>
+                <div class="route-modal__tip">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Apta para todas las edades. Lleva ropa que puedas mojar, hay vados.</span>
+                </div>
+                <div class="route-modal__map">
+                    <span class="material-symbols-outlined">map</span>
+                    <span>Mapa interactivo — próximamente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+     NAV
+     ═══════════════════════════════════════ -->
+    <header class="topnav" id="inicio">
+        <div class="topnav__inner">
+            <a class="topnav__logo" href="#">⛰ Aquí Nomás</a>
+
+            <!-- Hamburger checkbox trick -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle__input" />
+            <label for="nav-toggle" class="nav-toggle__btn">
+                <span></span><span></span><span></span>
+            </label>
+
+            <nav class="topnav__links">
+                <a class="topnav__link" href="#rutas">Rutas</a>
+                <a class="topnav__link" href="#galeria">Galería</a>
+                <a class="topnav__link" href="#features">Funcionalidades</a>
+                <a class="topnav__link" href="#opiniones">Opiniones</a>
+                <a class="topnav__link" href="#eventos">Eventos</a>
+                <a class="topnav__link" href="#faq">FAQ</a>
+                <a class="topnav__link" href="#contacto">Contacto</a>
+            </nav>
+            <div class="topnav__ctas">
+                <a class="btn btn--ghost" href="#login">Iniciar sesión</a>
+                <a class="btn btn--primary" href="#register">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+     [1] HERO
+     ═══════════════════════════════════════ -->
+        <section class="hero">
+            <div class="hero__bg">
+                <img src="src/assets/img/ImagenFondo.webp"
+                    alt="Cordillera Andina" class="hero__img" loading="eager" />
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1 class="hero__title">Descubre los Andes<br /></h1>
+                <p class="hero__sub">Guías técnicas, rutas verificadas y comunidad para exploradores del altiplano
+                    ecuatoriano.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary btn--lg" href="#rutas">
+                        Explorar Rutas
+                        <span class="material-symbols-outlined">north_east</span>
+                    </a>
+                    <a class="btn btn--outline-white btn--lg" href="#galeria">Ver galería</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats card overlap -->
+        <div class="stats-wrap">
+            <div class="stats-card">
+                <div class="stats-item">
+                    <span class="material-symbols-outlined stats-item__icon stats-item__icon--primary">terrain</span>
+                    <strong class="stats-item__value">15+ Rutas</strong>
+                    <span class="stats-item__label">Verificadas</span>
+                </div>
+                <div class="stats-divider"></div>
+                <div class="stats-item">
+                    <span class="material-symbols-outlined stats-item__icon stats-item__icon--secondary">altitude</span>
+                    <strong class="stats-item__value">2,800–4,800</strong>
+                    <span class="stats-item__label">Metros snm</span>
+                </div>
+                <div class="stats-divider"></div>
+                <div class="stats-item">
+                    <span class="material-symbols-outlined stats-item__icon stats-item__icon--tertiary">groups</span>
+                    <strong class="stats-item__value">Todos los niveles</strong>
+                    <span class="stats-item__label">Comunidad abierta</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════
+     [2] RUTAS DESTACADAS
+     ═══════════════════════════════════════ -->
+        <section class="section section--surface" id="rutas">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Rutas Destacadas</h2>
+                    <div class="section__rule"></div>
+                    <p class="section__sub">Explora las montañas y volcanes que rodean Quito, desde caminatas familiares
+                        hasta ascensos técnicos.</p>
+                </div>
+
+                <div class="routes-grid">
+
+                    <article class="route-card">
+                        <div class="route-card__img-wrap">
+                            <img src="src/assets/img/Rucu Pichincha.webp" alt="Rucu Pichincha" class="route-card__img"
+                                loading="lazy" />
+                            <span class="badge badge--hard">Moderada-Difícil</span>
+                        </div>
+                        <div class="route-card__body">
+                            <h3 class="route-card__name">Teleférico + Rucu Pichincha</h3>
+                            <p class="route-card__desc">Cumbre icónica con senderos de páramo y vistas espectaculares de
+                                Quito y la cordillera.</p>
+                            <div class="route-card__meta">
+                                <span class="meta-item"><span class="material-symbols-outlined">schedule</span>4–6
+                                    h</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">altitude</span>4,784
+                                    m</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">distance</span>8–10
+                                    km</span>
+                                <span class="meta-item"><span
+                                        class="material-symbols-outlined">calendar_month</span>Jun–Sep</span>
+                            </div>
+                            <button class="btn btn--outline btn--block" onclick="openModal('rucu')">Ver
+                                detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="route-card">
+                        <div class="route-card__img-wrap">
+                            <img src="src/assets/img/Pasochoa.webp" alt="Volcán Pasochoa" class="route-card__img"
+                                loading="lazy" />
+                            <span class="badge badge--moderate">Moderada</span>
+                        </div>
+                        <div class="route-card__body">
+                            <h3 class="route-card__name">Volcán Pasochoa</h3>
+                            <p class="route-card__desc">Reserva natural con bosques andinos y pajonales, ideal para
+                                avistamiento de aves y cóndores.</p>
+                            <div class="route-card__meta">
+                                <span class="meta-item"><span class="material-symbols-outlined">schedule</span>7–8
+                                    h</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">altitude</span>4,200
+                                    m</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">distance</span>12–14
+                                    km</span>
+                                <span class="meta-item"><span
+                                        class="material-symbols-outlined">calendar_month</span>Jun–Sep</span>
+                            </div>
+                            <button class="btn btn--outline btn--block" onclick="openModal('pasochoa')">Ver
+                                detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="route-card">
+                        <div class="route-card__img-wrap">
+                            <img src="src/assets/img/Pululahua.webp" alt="Cráter Pululahua" class="route-card__img"
+                                loading="lazy" />
+                            <span class="badge badge--easy">Fácil-Moderada</span>
+                        </div>
+                        <div class="route-card__body">
+                            <h3 class="route-card__name">Cráter Pululahua</h3>
+                            <p class="route-card__desc">Camina dentro de uno de los únicos cráteres volcánicos habitados
+                                del mundo.</p>
+                            <div class="route-card__meta">
+                                <span class="meta-item"><span class="material-symbols-outlined">schedule</span>2–3
+                                    h</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">altitude</span>3,350
+                                    m</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">distance</span>8–9
+                                    km</span>
+                                <span class="meta-item"><span
+                                        class="material-symbols-outlined">calendar_month</span>Todo el año</span>
+                            </div>
+                            <button class="btn btn--outline btn--block" onclick="openModal('pululahua')">Ver
+                                detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="route-card">
+                        <div class="route-card__img-wrap">
+                            <img src="src/assets/img/Guagua Pichincha.webp" alt="Guagua Pichincha"
+                                class="route-card__img" loading="lazy" />
+                            <span class="badge badge--hard">Difícil</span>
+                        </div>
+                        <div class="route-card__body">
+                            <h3 class="route-card__name">Guagua Pichincha</h3>
+                            <p class="route-card__desc">Volcán activo con ruta exigente hasta su cráter humeante.
+                                Requiere experiencia en alta montaña.</p>
+                            <div class="route-card__meta">
+                                <span class="meta-item"><span class="material-symbols-outlined">schedule</span>7–9
+                                    h</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">altitude</span>4,784
+                                    m</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">distance</span>16–18
+                                    km</span>
+                                <span class="meta-item"><span
+                                        class="material-symbols-outlined">calendar_month</span>Jun–Sep</span>
+                            </div>
+                            <button class="btn btn--outline btn--block" onclick="openModal('guagua')">Ver
+                                detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="route-card">
+                        <div class="route-card__img-wrap">
+                            <img src="src/assets/img/Ilalo.webp" alt="Volcán Ilaló" class="route-card__img"
+                                loading="lazy" />
+                            <span class="badge badge--easy">Fácil-Moderada</span>
+                        </div>
+                        <div class="route-card__body">
+                            <h3 class="route-card__name">Volcán Ilaló</h3>
+                            <p class="route-card__desc">Volcán extinto con vistas panorámicas perfectas para
+                                aclimatación y caminatas moderadas.</p>
+                            <div class="route-card__meta">
+                                <span class="meta-item"><span class="material-symbols-outlined">schedule</span>4–5
+                                    h</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">altitude</span>3,180
+                                    m</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">distance</span>10–11
+                                    km</span>
+                                <span class="meta-item"><span
+                                        class="material-symbols-outlined">calendar_month</span>Todo el año</span>
+                            </div>
+                            <button class="btn btn--outline btn--block" onclick="openModal('ilalo')">Ver
+                                detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="route-card">
+                        <div class="route-card__img-wrap">
+                            <img src="src/assets/img/Guagrapamba de Nono.webp" alt="Cascadas de Nono"
+                                class="route-card__img" loading="lazy" />
+                            <span class="badge badge--fácil">Fácil</span>
+                        </div>
+                        <div class="route-card__body">
+                            <h3 class="route-card__name">Cascadas de Nono</h3>
+                            <p class="route-card__desc">Ruta tranquila entre bosques nublados, ríos y cascadas, ideal
+                                para familias y principiantes.</p>
+                            <div class="route-card__meta">
+                                <span class="meta-item"><span class="material-symbols-outlined">schedule</span>1.5–2
+                                    h</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">altitude</span>2,700
+                                    m</span>
+                                <span class="meta-item"><span class="material-symbols-outlined">distance</span>3
+                                    km</span>
+                                <span class="meta-item"><span
+                                        class="material-symbols-outlined">calendar_month</span>Todo el año</span>
+                            </div>
+                            <button class="btn btn--outline btn--block" onclick="openModal('nono')">Ver
+                                detalles</button>
+                        </div>
+                    </article>
+
+                </div><!-- /routes-grid -->
+
+                <div class="section__cta">
+                    <a class="btn btn--outline-dark" href="#">Ver todas las rutas <span
+                            class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+     [3] GALERÍA — Carrusel CSS puro
+     ═══════════════════════════════════════ -->
+        <section class="section section--light" id="galeria">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Galería de Lugares</h2>
+                    <div class="section__rule"></div>
+                    <p class="section__sub">Un vistazo a los paisajes que te esperan en los Andes de Quito.</p>
+                </div>
+            </div>
+
+            <div class="carousel">
+                <!-- Carrusel: 2 radios = 2 páginas (3 imágenes cada una) -->
+                <input type="radio" name="carousel" id="slide-1" class="carousel__radio" checked />
+                <input type="radio" name="carousel" id="slide-2" class="carousel__radio" />
+
+                <div class="carousel__track">
+                    <!-- Página 1 -->
+                    <div class="carousel__slide">
+                        <img src="src/assets/img/Rucu Pichincha.webp" alt="Rucu Pichincha" class="carousel__img"
+                            loading="lazy" />
+                        <div class="carousel__caption">
+                            <span class="carousel__name">Rucu Pichincha</span>
+                            <span class="carousel__alt">4,784 msnm · Moderada-Difícil</span>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="src/assets/img/Pasochoa.webp" alt="Volcán Pasochoa" class="carousel__img"
+                            loading="lazy" />
+                        <div class="carousel__caption">
+                            <span class="carousel__name">Volcán Pasochoa</span>
+                            <span class="carousel__alt">4,200 msnm · Moderada</span>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="src/assets/img/Pululahua.webp" alt="Cráter Pululahua" class="carousel__img"
+                            loading="lazy" />
+                        <div class="carousel__caption">
+                            <span class="carousel__name">Cráter Pululahua</span>
+                            <span class="carousel__alt">3,350 msnm · Fácil-Moderada</span>
+                        </div>
+                    </div>
+                    <!-- Página 2 -->
+                    <div class="carousel__slide">
+                        <img src="src/assets/img/Guagua Pichincha.webp" alt="Guagua Pichincha" class="carousel__img"
+                            loading="lazy" />
+                        <div class="carousel__caption">
+                            <span class="carousel__name">Guagua Pichincha</span>
+                            <span class="carousel__alt">4,784 msnm · Difícil</span>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="src/assets/img/Ilalo.webp" alt="Volcán Ilaló" class="carousel__img" loading="lazy" />
+                        <div class="carousel__caption">
+                            <span class="carousel__name">Volcán Ilaló</span>
+                            <span class="carousel__alt">3,180 msnm · Fácil-Moderada</span>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="src/assets/img/Guagrapamba de Nono.webp" alt="Cascadas de Nono" class="carousel__img"
+                            loading="lazy" />
+                        <div class="carousel__caption">
+                            <span class="carousel__name">Cascadas de Nono</span>
+                            <span class="carousel__alt">2,700 msnm · Fácil</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dots: 2 puntos = 2 páginas -->
+                <div class="carousel__dots">
+                    <label for="slide-1" class="carousel__dot"></label>
+                    <label for="slide-2" class="carousel__dot"></label>
+                </div>
+
+                <!-- Flechas -->
+                <div class="carousel__arrows">
+                    <label for="slide-1" class="carousel__arrow carousel__arrow--prev">&#8592;</label>
+                    <label for="slide-2" class="carousel__arrow carousel__arrow--next">&#8594;</label>
+                </div>
+
+            </div><!-- /carousel -->
+        </section>
+
+        <!-- ═══════════════════════════════════════
+     [4] FEATURES
+     ═══════════════════════════════════════ -->
+        <section class="section section--dark" id="features">
+            <div class="container">
+                <div class="section__header section__header--dark">
+                    <span class="section__eyebrow">Herramientas</span>
+                    <h2 class="section__title section__title--white">Todo para tu expedición</h2>
+                    <div class="section__rule section__rule--primary"></div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <span class="material-symbols-outlined feature-card__icon">route</span>
+                        </div>
+                        <h4 class="feature-card__title">Rutas Verificadas</h4>
+                        <p class="feature-card__desc">Información técnica precisa con puntos de referencia y alertas
+                            actualizadas por la comunidad.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <span class="material-symbols-outlined feature-card__icon">person_pin_circle</span>
+                        </div>
+                        <h4 class="feature-card__title">Perfil de Senderista</h4>
+                        <p class="feature-card__desc">Registra y gestiona tu historial de lugares visitados y mantén tu
+                            bitácora andina.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <span class="material-symbols-outlined feature-card__icon">rate_review</span>
+                        </div>
+                        <h4 class="feature-card__title">Opiniones Reales</h4>
+                        <p class="feature-card__desc">Lee y comparte tu experiencia en cada ruta. Información
+                            actualizada por quienes la recorren.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <span class="material-symbols-outlined feature-card__icon">event</span>
+                        </div>
+                        <h4 class="feature-card__title">Eventos de Montaña</h4>
+                        <p class="feature-card__desc">Inscríbete a salidas grupales, talleres de orientación y jornadas
+                            de reforestación.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <span class="material-symbols-outlined feature-card__icon">lightbulb</span>
+                        </div>
+                        <h4 class="feature-card__title">Sugerencias Andinas</h4>
+                        <p class="feature-card__desc">Recibe recomendaciones de rutas según tu nivel, disponibilidad y
+                            preferencias de terreno.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <span class="material-symbols-outlined feature-card__icon">admin_panel_settings</span>
+                        </div>
+                        <h4 class="feature-card__title">Panel de Gestión</h4>
+                        <p class="feature-card__desc">Administración centralizada de rutas, eventos, sugerencias y
+                            comentarios de la comunidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+     [5] TESTIMONIALS
+     ═══════════════════════════════════════ -->
+        <section class="section section--surface" id="opiniones">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">La voz de la montaña</h2>
+                    <div class="section__rule"></div>
+                    <p class="section__sub">Voces de quienes recorren nuestros senderos.</p>
+                </div>
+                <div class="testimonials-grid">
+
+                    <div class="testimonial-card">
+                        <span class="material-symbols-outlined testimonial-card__quote">format_quote</span>
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__avatar">CM</div>
+                            <div>
+                                <strong class="testimonial-card__name">Carlos Morales</strong>
+                                <span class="testimonial-card__route">Rucu Pichincha</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"La guía técnica fue impecable. Los tiempos estimados y los
+                            puntos de referencia me ayudaron a sentirme seguro incluso cuando bajó la neblina."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <span class="material-symbols-outlined testimonial-card__quote">format_quote</span>
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__avatar">LV</div>
+                            <div>
+                                <strong class="testimonial-card__name">Lucía Vargas</strong>
+                                <span class="testimonial-card__route">Cráter Pululahua</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__stars">★★★★☆</div>
+                        <p class="testimonial-card__text">"Viajé sola y los mapas fueron mi mejor compañía. Es increíble
+                            tener tanta información local y confiable en un solo lugar."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <span class="material-symbols-outlined testimonial-card__quote">format_quote</span>
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__avatar">DP</div>
+                            <div>
+                                <strong class="testimonial-card__name">Diego Paredes</strong>
+                                <span class="testimonial-card__route">Cascadas de Nono</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"Llevé a mis hijos siguiendo la recomendación de nivel 'Fácil'
+                            y fue un éxito total. El bosque nublado nos dejó sin palabras."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <span class="material-symbols-outlined testimonial-card__quote">format_quote</span>
+                        <div class="testimonial-card__header">
+                            <div class="testimonial-card__avatar">AR</div>
+                            <div>
+                                <strong class="testimonial-card__name">Ana Ríos</strong>
+                                <span class="testimonial-card__route">Volcán Ilaló</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card__stars">★★★★☆</div>
+                        <p class="testimonial-card__text">"Perfecta para aclimatarse. Las vistas del valle de Los
+                            Chillos desde la cima son un regalo. Regresaré pronto al Pasochoa."</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+     [6] EVENTOS
+     ═══════════════════════════════════════ -->
+        <section class="section section--light" id="eventos">
+            <div class="container">
+                <div class="section__header-row">
+                    <div>
+                        <h2 class="section__title section__title--left">Próximos Eventos</h2>
+                        <p class="section__sub section__sub--left">Únete a nuestras salidas grupales organizadas.</p>
+                    </div>
+                    <a class="btn btn--ghost-dark" href="#">Ver calendario <span
+                            class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+
+                <div class="events-grid">
+
+                    <div class="event-card">
+                        <div class="event-card__top">
+                            <span class="event-card__date">Sáb 14 Jun · 07:00</span>
+                            <span class="badge badge--moderate">Moderada</span>
+                        </div>
+                        <h4 class="event-card__title">Ascenso al Rucu Pichincha</h4>
+                        <p class="event-card__place">
+                            <span class="material-symbols-outlined">location_on</span>Teleférico de Quito
+                        </p>
+                        <p class="event-card__spots">20 cupos disponibles</p>
+                        <div class="event-card__footer">
+                            <span class="event-card__price">$15.00</span>
+                            <a class="btn btn--primary btn--sm" href="#register">Registrarse</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-card__top">
+                            <span class="event-card__date">Dom 22 Jun · 08:30</span>
+                            <span class="badge badge--easy">Fácil</span>
+                        </div>
+                        <h4 class="event-card__title">Caminata Familiar Pululahua</h4>
+                        <p class="event-card__place">
+                            <span class="material-symbols-outlined">location_on</span>Mirador Ventanillas
+                        </p>
+                        <p class="event-card__spots">30 cupos disponibles</p>
+                        <div class="event-card__footer">
+                            <span class="event-card__price event-card__price--free">Gratis</span>
+                            <a class="btn btn--primary btn--sm" href="#register">Registrarse</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-card__top">
+                            <span class="event-card__date">Sáb 5 Jul · 05:00</span>
+                            <span class="badge badge--hard">Difícil</span>
+                        </div>
+                        <h4 class="event-card__title">Expedición Guagua Pichincha</h4>
+                        <p class="event-card__place">
+                            <span class="material-symbols-outlined">location_on</span>Lloa, Pichincha
+                        </p>
+                        <p class="event-card__spots">12 cupos disponibles</p>
+                        <div class="event-card__footer">
+                            <span class="event-card__price">$25.00</span>
+                            <a class="btn btn--primary btn--sm" href="#register">Registrarse</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+     [7] FAQ — details/summary sin JS
+     ═══════════════════════════════════════ -->
+        <section class="section section--surface" id="faq">
+            <div class="container container--narrow">
+                <div class="section__header">
+                    <h2 class="section__title">Preguntas Frecuentes</h2>
+                    <div class="section__rule"></div>
+                </div>
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+                        <summary class="faq-item__summary">
+                            ¿Necesito experiencia previa para hacer las rutas?
+                            <span class="faq-item__icon material-symbols-outlined">add</span>
+                        </summary>
+                        <p class="faq-item__answer">Depende del nivel. Las rutas Fácil y Fácil-Moderada son aptas para
+                            principiantes y familias sin ninguna experiencia técnica. Para rutas Difícil como el Guagua
+                            Pichincha sí se recomienda experiencia previa en alta montaña y buena condición física.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__summary">
+                            ¿Cómo me registro a un evento?
+                            <span class="faq-item__icon material-symbols-outlined">add</span>
+                        </summary>
+                        <p class="faq-item__answer">Crea una cuenta de turista, accede a la sección de Eventos y pulsa
+                            "Registrarse" en el evento de tu elección. Recibirás un correo de confirmación con los
+                            detalles del punto de encuentro.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__summary">
+                            ¿Es seguro hacer estas rutas solo/a?
+                            <span class="faq-item__icon material-symbols-outlined">add</span>
+                        </summary>
+                        <p class="faq-item__answer">Aunque muchas rutas están bien señalizadas, siempre recomendamos ir
+                            acompañado. Si decides ir solo/a, avisa siempre a alguien sobre tu ruta, hora de salida y
+                            hora estimada de retorno. Lleva carga completa en el teléfono y mapas descargados offline.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__summary">
+                            ¿Las rutas tienen costo de entrada?
+                            <span class="faq-item__icon material-symbols-outlined">add</span>
+                        </summary>
+                        <p class="faq-item__answer">La mayoría de las rutas en Reservas Nacionales son gratuitas bajo
+                            registro. Algunas como el Teleférico tienen costos asociados que detallamos en cada guía de
+                            ruta. El Pasochoa requiere un valor de ingreso a la Reserva Geobotánica.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__summary">
+                            ¿Cuál es la mejor temporada para subir?
+                            <span class="faq-item__icon material-symbols-outlined">add</span>
+                        </summary>
+                        <p class="faq-item__answer">La temporada seca andina (junio–septiembre) ofrece los cielos más
+                            despejados. Sin embargo, el clima de la sierra es impredecible: siempre parte temprano y
+                            lleva ropa impermeable independientemente de la época del año.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__summary">
+                            ¿Puedo sugerir una ruta que no está en el catálogo?
+                            <span class="faq-item__icon material-symbols-outlined">add</span>
+                        </summary>
+                        <p class="faq-item__answer">Sí. Desde tu perfil de turista puedes enviar sugerencias al equipo
+                            administrador. Si la ruta cumple los criterios de verificación, la publicamos en el catálogo
+                            con el crédito correspondiente.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+     [8] CONTACT
+     ═══════════════════════════════════════ -->
+        <section class="section section--dark" id="contacto">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section__title section__title--white">¿Tienes alguna pregunta?</h2>
+                        <p class="contact-info__sub">¿Quieres reportar una ruta, colaborar o simplemente saber más?
+                            Escríbenos.</p>
+                        <ul class="contact-info__list">
+                            <li class="contact-info__item">
+                                <div class="contact-info__icon-wrap"><span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div>
+                                    <span class="contact-info__label">Correo</span>
+                                    <span class="contact-info__value">hola@aquinomas.ec</span>
+                                </div>
+                            </li>
+                            <li class="contact-info__item">
+                                <div class="contact-info__icon-wrap"><span class="material-symbols-outlined">call</span>
+                                </div>
+                                <div>
+                                    <span class="contact-info__label">WhatsApp</span>
+                                    <span class="contact-info__value">+593 99 123 4567</span>
+                                </div>
+                            </li>
+                            <li class="contact-info__item">
+                                <div class="contact-info__icon-wrap"><span
+                                        class="material-symbols-outlined">location_on</span></div>
+                                <div>
+                                    <span class="contact-info__label">Base de Operaciones</span>
+                                    <span class="contact-info__value">Quito, Ecuador</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="contact-info__socials">
+                            <a class="social-btn" href="#"><span class="material-symbols-outlined">share</span></a>
+                            <a class="social-btn" href="#"><span class="material-symbols-outlined">camera</span></a>
+                            <a class="social-btn" href="#"><span class="material-symbols-outlined">public</span></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap">
+                        <form class="contact-form">
+                            <div class="field field--dark">
+                                <label class="field__label field__label--dark">Nombre completo</label>
+                                <input class="field__input field__input--dark" type="text" placeholder="Juan Pérez" />
+                            </div>
+                            <div class="field field--dark">
+                                <label class="field__label field__label--dark">Correo electrónico</label>
+                                <input class="field__input field__input--dark" type="email"
+                                    placeholder="juan@ejemplo.com" />
+                            </div>
+                            <div class="field field--dark">
+                                <label class="field__label field__label--dark">Asunto</label>
+                                <select class="field__input field__input--dark field__select">
+                                    <option>Reportar Ruta</option>
+                                    <option>Soporte Técnico</option>
+                                    <option>Colaboración</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="field field--dark">
+                                <label class="field__label field__label--dark">Mensaje</label>
+                                <textarea class="field__input field__input--dark field__textarea" rows="4"
+                                    placeholder="Cuéntanos..."></textarea>
+                            </div>
+                            <button class="btn btn--primary btn--block" type="submit">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════ -->
+    <footer class="footer">
+        <hr class="footer__hr" />
+
+        <!-- Columnas de links -->
+        <div class="footer__cols container">
+
+            <!-- Marca y Newsletter -->
+            <div class="footer__brand-wrap">
+                <div class="footer__brand">
+                    <span class="footer__logo">⛰ Aquí Nomás</span>
+                    <p class="footer__tagline">La guía definitiva para explorar los Andes ecuatorianos con seguridad,
+                        respeto y pasión por la montaña.</p>
+                    <div class="footer__newsletter">
+                        <input class="footer__newsletter-input" type="email" placeholder="Únete al newsletter" />
+                        <button class="footer__newsletter-btn">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna 1: Navegación -->
+            <div class="footer__col">
+                <h5 class="footer__col-title">Navegación</h5>
+                <ul class="footer__links">
+                    <li><a href="#rutas">Rutas</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Recursos -->
+            <div class="footer__col">
+                <h5 class="footer__col-title">Recursos</h5>
+                <ul class="footer__links">
+                    <li><a href="#">Mapas GPX</a></li>
+                    <li><a href="#">Guía de Equipo</a></li>
+                    <li><a href="#">Clima en vivo</a></li>
+                    <li><a href="#">Directorio de Guías</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Legal -->
+            <div class="footer__col">
+                <h5 class="footer__col-title">Legal</h5>
+                <ul class="footer__links">
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer__separator"></div>
+
+        <div class="footer__bottom">
+            <p>© 2026 Aquí Nomás — El Observador Andino. Hecho en los Andes.</p>
+        </div>
+    </footer>
+    <script src="src/assets/js/main.js"></script>
+</body>
+
+</html>
