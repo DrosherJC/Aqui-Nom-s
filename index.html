@@ -4,85 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aquí Nomás — El Observador Andino</title>
+    <title>Aquí Nomás</title>
     <link rel="stylesheet" href="src/assets/css/styles.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/normalize.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/img/favicon_io/">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="src/assets/img/favicon_io/site.webmanifest">
 </head>
 
 <body>
 
-    <!-- ═══════════════════════════════════════
-     :TARGET PANELS — Login & Register
-     Activados por href="#login" / href="#register"
-     CSS puro, sin JS
-     ═══════════════════════════════════════ -->
-    <div class="auth-overlay" id="login">
-        <div class="auth-panel">
-            <a class="auth-close" href="#">
-                <span class="material-symbols-outlined">close</span>
-            </a>
-            <div class="auth-panel__brand">⛰ Aquí Nomás</div>
-            <h2 class="auth-panel__title">Bienvenido de vuelta</h2>
-            <p class="auth-panel__sub">Ingresa tus credenciales para continuar</p>
-            <div class="auth-form">
-                <div class="field">
-                    <label class="field__label">Correo electrónico</label>
-                    <input class="field__input" type="email" placeholder="tu@correo.com" />
-                </div>
-                <div class="field">
-                    <label class="field__label">Contraseña</label>
-                    <input class="field__input" type="password" placeholder="••••••••" />
-                </div>
-                <a class="auth-link auth-link--right" href="#">¿Olvidaste tu contraseña?</a>
-                <button class="btn btn--primary btn--block">Iniciar sesión</button>
-            </div>
-            <p class="auth-panel__footer">¿No tienes cuenta? <a class="auth-link" href="#register">Regístrate</a></p>
-            <a class="auth-back" href="#"><span class="material-symbols-outlined">arrow_back</span> Volver al inicio</a>
-        </div>
-    </div>
-
-    <div class="auth-overlay" id="register">
-        <div class="auth-panel">
-            <a class="auth-close" href="#">
-                <span class="material-symbols-outlined">close</span>
-            </a>
-            <div class="auth-panel__brand">⛰ Aquí Nomás</div>
-            <h2 class="auth-panel__title">Crea tu cuenta</h2>
-            <p class="auth-panel__sub">Únete a la comunidad de senderistas</p>
-            <div class="auth-form">
-                <div class="field">
-                    <label class="field__label">Nombre completo</label>
-                    <input class="field__input" type="text" placeholder="Tu nombre" />
-                </div>
-                <div class="field">
-                    <label class="field__label">Correo electrónico</label>
-                    <input class="field__input" type="email" placeholder="tu@correo.com" />
-                </div>
-                <div class="field">
-                    <label class="field__label">Contraseña</label>
-                    <input class="field__input" type="password" placeholder="••••••••" />
-                </div>
-                <div class="field">
-                    <label class="field__label">Tipo de cuenta</label>
-                    <select class="field__input field__select">
-                        <option value="turista">Turista</option>
-                        <option value="admin">Administrador</option>
-                    </select>
-                </div>
-                <button class="btn btn--primary btn--block">Crear cuenta</button>
-            </div>
-            <p class="auth-panel__footer">¿Ya tienes cuenta? <a class="auth-link" href="#login">Inicia sesión</a></p>
-            <a class="auth-back" href="#"><span class="material-symbols-outlined">arrow_back</span> Volver al inicio</a>
-        </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════
-     MODALES DE RUTAS 
-     ═══════════════════════════════════════ -->
+    <!--MODALES DE RUTAS -->
     <div class="route-modal" id="modal-rucu">
         <div class="route-modal__backdrop" onclick="closeModal('rucu')"></div>
         <div class="route-modal__panel">
@@ -291,14 +228,11 @@
         </div>
     </div>
 
-    <!-- ═══════════════════════════════════════
-     NAV
-     ═══════════════════════════════════════ -->
+    <!--NAV-->
     <header class="topnav" id="inicio">
         <div class="topnav__inner">
             <a class="topnav__logo" href="#">⛰ Aquí Nomás</a>
 
-            <!-- Hamburger checkbox trick -->
             <input type="checkbox" id="nav-toggle" class="nav-toggle__input" />
             <label for="nav-toggle" class="nav-toggle__btn">
                 <span></span><span></span><span></span>
@@ -322,13 +256,10 @@
 
     <main>
 
-        <!-- ═══════════════════════════════════════
-     [1] HERO
-     ═══════════════════════════════════════ -->
+        <!--HERO -->
         <section class="hero">
             <div class="hero__bg">
-                <img src="src/assets/img/ImagenFondo.webp"
-                    alt="Cordillera Andina" class="hero__img" loading="eager" />
+                <img src="src/assets/img/ImagenFondo.webp" alt="Cordillera Andina" class="hero__img" loading="eager" />
             </div>
             <div class="hero__overlay"></div>
             <div class="hero__content">
@@ -345,7 +276,6 @@
             </div>
         </section>
 
-        <!-- Stats card overlap -->
         <div class="stats-wrap">
             <div class="stats-card">
                 <div class="stats-item">
@@ -368,9 +298,7 @@
             </div>
         </div>
 
-        <!-- ═══════════════════════════════════════
-     [2] RUTAS DESTACADAS
-     ═══════════════════════════════════════ -->
+        <!--RUTAS DESTACADAS -->
         <section class="section section--surface" id="rutas">
             <div class="container">
                 <div class="section__header">
@@ -532,7 +460,7 @@
                         </div>
                     </article>
 
-                </div><!-- /routes-grid -->
+                </div>
 
                 <div class="section__cta">
                     <a class="btn btn--outline-dark" href="#">Ver todas las rutas <span
@@ -541,9 +469,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
-     [3] GALERÍA — Carrusel CSS puro
-     ═══════════════════════════════════════ -->
+        <!--GALERÍA -->
         <section class="section section--light" id="galeria">
             <div class="container">
                 <div class="section__header">
@@ -554,12 +480,10 @@
             </div>
 
             <div class="carousel">
-                <!-- Carrusel: 2 radios = 2 páginas (3 imágenes cada una) -->
                 <input type="radio" name="carousel" id="slide-1" class="carousel__radio" checked />
                 <input type="radio" name="carousel" id="slide-2" class="carousel__radio" />
 
                 <div class="carousel__track">
-                    <!-- Página 1 -->
                     <div class="carousel__slide">
                         <img src="src/assets/img/Rucu Pichincha.webp" alt="Rucu Pichincha" class="carousel__img"
                             loading="lazy" />
@@ -584,7 +508,6 @@
                             <span class="carousel__alt">3,350 msnm · Fácil-Moderada</span>
                         </div>
                     </div>
-                    <!-- Página 2 -->
                     <div class="carousel__slide">
                         <img src="src/assets/img/Guagua Pichincha.webp" alt="Guagua Pichincha" class="carousel__img"
                             loading="lazy" />
@@ -610,24 +533,20 @@
                     </div>
                 </div>
 
-                <!-- Dots: 2 puntos = 2 páginas -->
                 <div class="carousel__dots">
                     <label for="slide-1" class="carousel__dot"></label>
                     <label for="slide-2" class="carousel__dot"></label>
                 </div>
 
-                <!-- Flechas -->
                 <div class="carousel__arrows">
                     <label for="slide-1" class="carousel__arrow carousel__arrow--prev">&#8592;</label>
                     <label for="slide-2" class="carousel__arrow carousel__arrow--next">&#8594;</label>
                 </div>
 
-            </div><!-- /carousel -->
+            </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
-     [4] FEATURES
-     ═══════════════════════════════════════ -->
+        <!--FEATURES -->
         <section class="section section--dark" id="features">
             <div class="container">
                 <div class="section__header section__header--dark">
@@ -688,9 +607,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
-     [5] TESTIMONIALS
-     ═══════════════════════════════════════ -->
+        <!-- TESTIMONIALS-->
         <section class="section section--surface" id="opiniones">
             <div class="container">
                 <div class="section__header">
@@ -760,9 +677,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
-     [6] EVENTOS
-     ═══════════════════════════════════════ -->
+        <!--EVENTOS -->
         <section class="section section--light" id="eventos">
             <div class="container">
                 <div class="section__header-row">
@@ -828,9 +743,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
-     [7] FAQ — details/summary sin JS
-     ═══════════════════════════════════════ -->
+        <!-- FAQ -->
         <section class="section section--surface" id="faq">
             <div class="container container--narrow">
                 <div class="section__header">
@@ -905,9 +818,7 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════════════
-     [8] CONTACT
-     ═══════════════════════════════════════ -->
+        <!--CONTACT -->
         <section class="section section--dark" id="contacto">
             <div class="container">
                 <div class="contact-grid">
@@ -982,16 +893,11 @@
 
     </main>
 
-    <!-- ═══════════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════════ -->
+    <!-- FOOTER -->
     <footer class="footer">
         <hr class="footer__hr" />
 
-        <!-- Columnas de links -->
         <div class="footer__cols container">
-
-            <!-- Marca y Newsletter -->
             <div class="footer__brand-wrap">
                 <div class="footer__brand">
                     <span class="footer__logo">⛰ Aquí Nomás</span>
@@ -1006,7 +912,6 @@
                 </div>
             </div>
 
-            <!-- Columna 1: Navegación -->
             <div class="footer__col">
                 <h5 class="footer__col-title">Navegación</h5>
                 <ul class="footer__links">
@@ -1017,7 +922,6 @@
                 </ul>
             </div>
 
-            <!-- Columna 2: Recursos -->
             <div class="footer__col">
                 <h5 class="footer__col-title">Recursos</h5>
                 <ul class="footer__links">
@@ -1028,7 +932,6 @@
                 </ul>
             </div>
 
-            <!-- Columna 3: Legal -->
             <div class="footer__col">
                 <h5 class="footer__col-title">Legal</h5>
                 <ul class="footer__links">
