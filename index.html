@@ -9,7 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="src/css/normalize.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="src/assets/img/favicon_io/">
     <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/favicon_io/favicon-32x32.png">
@@ -27,7 +28,8 @@
                 <span class="material-symbols-outlined">close</span>
             </button>
             <div class="route-modal__img-wrap">
-                <img src="src/assets/img/Rucu Pichincha.webp" alt="Rucu Pichincha" class="route-modal__img" />
+                <img src="https://www.libros-prohibidos.com/wp-content/uploads/2021/05/andres-medina-Plgu4IpxxnQ-unsplash-scaled.jpg"
+                    alt="Rucu Pichincha" class="route-modal__img" />
                 <span class="badge badge--hard route-modal__badge">Moderada-Difícil</span>
             </div>
             <div class="route-modal__body">
@@ -559,7 +561,7 @@
                         <div class="feature-card__icon-wrap">
                             <span class="material-symbols-outlined feature-card__icon">route</span>
                         </div>
-                        <h4 class="feature-card__title">Rutas Verificadas</h4>
+                        <h3 class="feature-card__title">Rutas Verificadas</h3>
                         <p class="feature-card__desc">Información técnica precisa con puntos de referencia y alertas
                             actualizadas por la comunidad.</p>
                     </div>
@@ -696,7 +698,7 @@
                             <span class="event-card__date">Sáb 14 Jun · 07:00</span>
                             <span class="badge badge--moderate">Moderada</span>
                         </div>
-                        <h4 class="event-card__title">Ascenso al Rucu Pichincha</h4>
+                        <h3 class="event-card__title">Ascenso al Rucu Pichincha</h3>
                         <p class="event-card__place">
                             <span class="material-symbols-outlined">location_on</span>Teleférico de Quito
                         </p>
@@ -862,17 +864,17 @@
                     <div class="contact-form-wrap">
                         <form class="contact-form">
                             <div class="field field--dark">
-                                <label class="field__label field__label--dark">Nombre completo</label>
-                                <input class="field__input field__input--dark" type="text" placeholder="Juan Pérez" />
+                                <label class="field__label field__label--dark" for="nombre">Nombre completo</label>
+                                <input class="field__input field__input--dark" type="text" placeholder="Juan Pérez" id="nombre"/>
                             </div>
                             <div class="field field--dark">
-                                <label class="field__label field__label--dark">Correo electrónico</label>
-                                <input class="field__input field__input--dark" type="email"
+                                <label class="field__label field__label--dark" for="correo">Correo electrónico</label>
+                                <input class="field__input field__input--dark" type="email" id="correo"
                                     placeholder="juan@ejemplo.com" />
                             </div>
                             <div class="field field--dark">
-                                <label class="field__label field__label--dark">Asunto</label>
-                                <select class="field__input field__input--dark field__select">
+                                <label class="field__label field__label--dark" for="asunto">Asunto</label>
+                                <select class="field__input field__input--dark field__select" id="asunto">
                                     <option>Reportar Ruta</option>
                                     <option>Soporte Técnico</option>
                                     <option>Colaboración</option>
@@ -880,8 +882,8 @@
                                 </select>
                             </div>
                             <div class="field field--dark">
-                                <label class="field__label field__label--dark">Mensaje</label>
-                                <textarea class="field__input field__input--dark field__textarea" rows="4"
+                                <label class="field__label field__label--dark" for="mensaje">Mensaje</label>
+                                <textarea class="field__input field__input--dark field__textarea" rows="4" id="mensaje"
                                     placeholder="Cuéntanos..."></textarea>
                             </div>
                             <button class="btn btn--primary btn--block" type="submit">Enviar mensaje</button>
@@ -913,7 +915,7 @@
             </div>
 
             <div class="footer__col">
-                <h5 class="footer__col-title">Navegación</h5>
+                <h3 class="footer__col-title">Navegación</h3>
                 <ul class="footer__links">
                     <li><a href="#rutas">Rutas</a></li>
                     <li><a href="#galeria">Galería</a></li>
