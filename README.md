@@ -37,14 +37,6 @@ El proyecto ha sido sometido a auditorías de **Google PageSpeed Insights**, log
 
 ---
 
-## 🎨 Prototipo de Diseño
-
-El diseño de la interfaz fue concebido y validado previamente en Figma para garantizar una experiencia de usuario consistente, moderna y accesible.
-
-*   **Enlace al Proyecto en Figma:** [Ver Prototipo Interactivo](https://www.figma.com/) *(Reemplaza con tu enlace real si deseas mostrarlo)*
-
----
-
 ## 📂 Estructura del Proyecto
 
 ```text
